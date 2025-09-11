@@ -51,7 +51,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -181,7 +187,13 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.2,
+        0.5,
+        1.0,
+        2.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -208,7 +220,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -619,6 +636,22 @@
     [
       "a15e2095-1a84-4c89-b260-d4b61f4da5d5",
       "MSU"
+    ],
+    [
+      "20ecb80d-e675-4e24-a292-a05613c06f52",
+      "WS2812B"
+    ],
+    [
+      "393c6c8e-c038-4ae2-a3be-16706c98ea29",
+      "WS2812B1"
+    ],
+    [
+      "eaf2427e-9e16-4ae1-8157-6e6955878b87",
+      "WS2812B2"
+    ],
+    [
+      "c8abecf2-1df6-4702-8736-2aef3500b6c9",
+      "WS2812B3"
     ]
   ],
   "text_variables": {}
