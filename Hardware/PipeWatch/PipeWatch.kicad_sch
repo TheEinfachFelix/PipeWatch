@@ -3286,7 +3286,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "MSU Caps Fixen\nInput Taster#\nDaten Verbindungen\nTemperatur\n\n\n"
+	(text "Input Taster#\nDaten Verbindungen\nTemperatur"
 		(exclude_from_sim no)
 		(at 53.594 124.714 0)
 		(effects
@@ -8485,6 +8485,58 @@
 			(project "PipeWatch"
 				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
 					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 135.89)
+		(size 12.7 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d82a02c7-ee87-4bf8-a44b-b037fa66d3cb")
+		(property "Sheetname" "Taster"
+			(at 86.36 135.1784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Taster.kicad_sch"
+			(at 86.36 141.5546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "OUT" input
+			(at 99.06 137.16 0)
+			(uuid "9ccb95b7-7135-4346-a10c-c13a6fdfb9b0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "PipeWatch"
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
+					(page "10")
 				)
 			)
 		)

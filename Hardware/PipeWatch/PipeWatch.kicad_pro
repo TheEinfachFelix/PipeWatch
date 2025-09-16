@@ -652,6 +652,10 @@
     [
       "c8abecf2-1df6-4702-8736-2aef3500b6c9",
       "WS2812B3"
+    ],
+    [
+      "d82a02c7-ee87-4bf8-a44b-b037fa66d3cb",
+      "Taster"
     ]
   ],
   "text_variables": {}

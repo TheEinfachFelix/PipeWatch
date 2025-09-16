@@ -741,16 +741,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "(100 nF ceramic, 10 μF aluminum)"
-		(exclude_from_sim no)
-		(at 184.404 93.726 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "39ee21a8-6108-4e7e-92e3-2c127dc3d739")
-	)
 	(junction
 		(at 163.83 102.87)
 		(diameter 0)
@@ -793,7 +783,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 102.87) (xy 180.34 102.87)
+			(xy 177.8 102.87) (xy 181.61 102.87)
 		)
 		(stroke
 			(width 0)
@@ -833,7 +823,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 92.71) (xy 180.34 92.71)
+			(xy 177.8 92.71) (xy 181.61 92.71)
 		)
 		(stroke
 			(width 0)
@@ -933,7 +923,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 102.87) (xy 180.34 101.6)
+			(xy 181.61 102.87) (xy 181.61 101.6)
 		)
 		(stroke
 			(width 0)
@@ -953,7 +943,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 92.71) (xy 180.34 93.98)
+			(xy 181.61 92.71) (xy 181.61 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1049,7 +1039,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 180.34 97.79 180)
+		(at 181.61 97.79 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1057,7 +1047,7 @@
 		(dnp no)
 		(uuid "305d4137-dfa8-4d37-b5de-9ced37dd358e")
 		(property "Reference" "C6"
-			(at 179.578 95.504 0)
+			(at 180.848 95.504 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1066,7 +1056,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 179.578 100.584 0)
+			(at 180.848 100.584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1074,8 +1064,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 179.3748 93.98 0)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.8"
+			(at 180.6448 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1084,7 +1074,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 180.34 97.79 0)
+			(at 181.61 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1093,7 +1083,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 180.34 97.79 0)
+			(at 181.61 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
