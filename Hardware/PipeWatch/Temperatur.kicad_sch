@@ -2,39 +2,37 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "ca075809-795e-4ef5-afd7-96c3a51707e3")
+	(uuid "cd9f974c-d9be-4d95-aec1-5ab92f1aff90")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Device:C"
+		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 0.254)
+				(offset 0)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
+			(property "Reference" "R"
+				(at 2.032 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "C"
-				(at 0.635 -2.54 0)
+			(property "Value" "R"
+				(at 0 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
+				(at -1.778 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -51,7 +49,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Unpolarized capacitor"
+			(property "Description" "Resistor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -60,7 +58,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "cap capacitor"
+			(property "ki_keywords" "R res resistor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -69,7 +67,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "C_*"
+			(property "ki_fp_filters" "R_*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -78,25 +76,12 @@
 					(hide yes)
 				)
 			)
-			(symbol "C_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
 					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -104,10 +89,10 @@
 					)
 				)
 			)
-			(symbol "C_1_1"
+			(symbol "R_1_1"
 				(pin passive line
 					(at 0 3.81 270)
-					(length 2.794)
+					(length 1.27)
 					(name "~"
 						(effects
 							(font
@@ -125,7 +110,7 @@
 				)
 				(pin passive line
 					(at 0 -3.81 90)
-					(length 2.794)
+					(length 1.27)
 					(name "~"
 						(effects
 							(font
@@ -144,52 +129,45 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "LED:WS2812B-2020"
-			(pin_names
-				(offset 0.254)
-			)
+		(symbol "Sensor_Temperature:DS18B20"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "D"
-				(at 5.08 5.715 0)
+			(property "Reference" "U"
+				(at -3.81 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right bottom)
 				)
 			)
-			(property "Value" "WS2812B-2020"
-				(at 1.27 -5.715 0)
+			(property "Value" "DS18B20"
+				(at 6.35 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 			)
-			(property "Footprint" "LED_SMD:LED_WS2812B-2020_PLCC4_2.0x2.0mm"
-				(at 1.27 -7.62 0)
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+				(at -25.4 -6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf"
-				(at 2.54 -9.525 0)
+			(property "Datasheet" "http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf"
+				(at -3.81 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "Description" "RGB LED with integrated controller, 2.0 x 2.0 mm, 12 mA"
+			(property "Description" "Programmable Resolution 1-Wire Digital Thermometer TO-92"
 				(at 0 0 0)
 				(effects
 					(font
@@ -198,7 +176,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "RGB LED NeoPixel Nano addressable"
+			(property "ki_keywords" "OneWire 1Wire Dallas Maxim"
 				(at 0 0 0)
 				(effects
 					(font
@@ -207,7 +185,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "LED*WS2812*-2020_PLCC4*"
+			(property "ki_fp_filters" "TO*92*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -216,104 +194,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "WS2812B-2020_0_0"
-				(text "RGB"
-					(at 2.286 -4.191 0)
-					(effects
-						(font
-							(size 0.762 0.762)
-						)
-					)
-				)
-			)
-			(symbol "WS2812B-2020_0_1"
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 1.778 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -3.556) (xy 1.778 -3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -1.524) (xy 1.27 -2.54) (xy 1.27 -2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -2.54) (xy 1.27 -3.556) (xy 1.27 -3.048)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.683 -1.016) (xy 3.683 -3.556) (xy 3.683 -4.064)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.699 -1.524) (xy 2.667 -1.524) (xy 3.683 -3.556) (xy 4.699 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.699 -3.556) (xy 2.667 -3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "DS18B20_0_1"
 				(rectangle
-					(start 5.08 5.08)
-					(end -5.08 -5.08)
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -322,12 +206,130 @@
 						(type background)
 					)
 				)
+				(polyline
+					(pts
+						(xy -3.937 3.175) (xy -3.937 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.937 3.175) (xy -3.302 3.175)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.937 2.54) (xy -3.302 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.937 1.905) (xy -3.302 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.937 1.27) (xy -3.302 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.937 0.635) (xy -3.302 0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.937 3.175)
+					(mid -3.302 3.8073)
+					(end -2.667 3.175)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.302 -2.54)
+					(radius 1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.667 3.175) (xy -2.667 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -2.667 -1.905)
+					(end -3.937 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 			)
-			(symbol "WS2812B-2020_1_1"
-				(pin input line
-					(at -7.62 0 0)
+			(symbol "DS18B20_1_1"
+				(pin power_in line
+					(at 0 7.62 270)
 					(length 2.54)
-					(name "DIN"
+					(name "V_{DD}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -343,45 +345,9 @@
 					)
 				)
 				(pin power_in line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
 					(at 0 -7.62 90)
 					(length 2.54)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "DOUT"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -389,6 +355,24 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "DQ"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -627,84 +611,128 @@
 		)
 	)
 	(junction
-		(at 138.43 97.79)
+		(at 127 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "41ef2fb0-ea03-4a9f-92a9-c80b8bfaa429")
+		(uuid "9a642849-3097-48ef-b008-7d60b08bebcb")
+	)
+	(junction
+		(at 121.92 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9e5717b2-57c7-46d0-a0dd-7389ca61956c")
 	)
 	(wire
 		(pts
-			(xy 146.05 97.79) (xy 147.32 97.79)
+			(xy 128.27 100.33) (xy 127 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1c519398-cc7b-41a8-9ff7-5af64a2df3a2")
+		(uuid "0deabf4e-f447-4e08-ae4e-12870895d75c")
 	)
 	(wire
 		(pts
-			(xy 147.32 97.79) (xy 147.32 99.06)
+			(xy 118.11 92.71) (xy 118.11 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "48571f26-8cfe-4c7a-866e-c00de032039c")
+		(uuid "1f09beb5-9171-4d83-8474-2d9e3bd7a7a3")
 	)
 	(wire
 		(pts
-			(xy 138.43 96.52) (xy 138.43 97.79)
+			(xy 118.11 91.44) (xy 121.92 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c2263810-b904-4912-a9bd-6b03ed079c3c")
+		(uuid "6b66c95f-ba05-42d0-a52b-6efe2671da34")
 	)
 	(wire
 		(pts
-			(xy 138.43 97.79) (xy 138.43 101.6)
+			(xy 121.92 91.44) (xy 127 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d499db29-2bf7-488b-b456-8b26cb099dde")
+		(uuid "7926817c-094f-4b2f-bfee-5f1fe8a33230")
 	)
-	(hierarchical_label "Dout"
+	(wire
+		(pts
+			(xy 127 100.33) (xy 125.73 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79885605-2d5e-4eae-9c7a-9359818455e4")
+	)
+	(wire
+		(pts
+			(xy 121.92 90.17) (xy 121.92 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f28edec-070c-49b8-9cf6-e23256bac317")
+	)
+	(wire
+		(pts
+			(xy 127 92.71) (xy 127 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f668eda4-9500-4f0c-9913-c9f5b4ad6226")
+	)
+	(hierarchical_label "OUT"
 		(shape input)
-		(at 146.05 109.22 0)
+		(at 128.27 100.33 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "713ec438-653c-413e-a180-a565f42c67d6")
-	)
-	(hierarchical_label "Din"
-		(shape input)
-		(at 130.81 109.22 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a03963d3-c7d6-499d-942b-7fb146880d61")
+		(uuid "3655627e-5008-449b-8a91-e0e526ab440b")
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 138.43 96.52 0)
+		(lib_id "Sensor_Temperature:DS18B20")
+		(at 118.11 100.33 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0bf90cb0-dc5c-4fc1-a025-a974150835d7")
-		(property "Reference" "#PWR033"
-			(at 138.43 100.33 0)
+		(fields_autoplaced yes)
+		(uuid "34389868-e7a7-4377-b579-e1d76c24f0c5")
+		(property "Reference" "U7"
+			(at 111.76 99.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "DS18B20"
+			(at 111.76 101.5999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 92.71 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -712,16 +740,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 138.176 93.218 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 138.43 96.52 0)
+		(property "Datasheet" "http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf"
+			(at 114.3 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -729,95 +749,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 138.43 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 138.43 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9b5ab10b-667d-4b9c-93f8-f2061395a0e1")
-		)
-		(instances
-			(project "PipeWatch"
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/20ecb80d-e675-4e24-a292-a05613c06f52"
-					(reference "#PWR033")
-					(unit 1)
-				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/393c6c8e-c038-4ae2-a3be-16706c98ea29"
-					(reference "#PWR036")
-					(unit 1)
-				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/c8abecf2-1df6-4702-8736-2aef3500b6c9"
-					(reference "#PWR042")
-					(unit 1)
-				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/eaf2427e-9e16-4ae1-8157-6e6955878b87"
-					(reference "#PWR039")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "LED:WS2812B-2020")
-		(at 138.43 109.22 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "40dad5df-af30-47cd-9ac9-dd659e5cdd4d")
-		(property "Reference" "D1"
-			(at 142.494 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "WS2812B-2020"
-			(at 138.43 115.824 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Felix:LED_4691_Neopixel_Edge"
-			(at 139.7 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf"
-			(at 140.97 118.745 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller, 2.0 x 2.0 mm, 12 mA"
-			(at 138.43 109.22 0)
+		(property "Description" "Programmable Resolution 1-Wire Digital Thermometer TO-92"
+			(at 118.11 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -826,33 +759,22 @@
 			)
 		)
 		(pin "3"
-			(uuid "1a797512-641c-47a5-a16d-dd35164a7aca")
-		)
-		(pin "4"
-			(uuid "f54616d2-ca41-49c8-af5c-fdb5c3925f22")
-		)
-		(pin "1"
-			(uuid "7353549c-0204-4a32-803e-83b6e6246ded")
+			(uuid "2e271c3c-25ee-467a-a6d8-af6e014ec200")
 		)
 		(pin "2"
-			(uuid "8ded5005-006f-4ba9-b631-2cde5db02eb3")
+			(uuid "e6675dfa-ff5c-47fe-82a1-2611f1183371")
+		)
+		(pin "1"
+			(uuid "053b1ab8-5d4f-4e0f-a5c6-917d4a515c3b")
 		)
 		(instances
 			(project "PipeWatch"
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/20ecb80d-e675-4e24-a292-a05613c06f52"
-					(reference "D1")
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/8d8c1d9a-b7e0-4f03-8374-91a22e1217a9"
+					(reference "U8")
 					(unit 1)
 				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/393c6c8e-c038-4ae2-a3be-16706c98ea29"
-					(reference "D2")
-					(unit 1)
-				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/c8abecf2-1df6-4702-8736-2aef3500b6c9"
-					(reference "D4")
-					(unit 1)
-				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/eaf2427e-9e16-4ae1-8157-6e6955878b87"
-					(reference "D3")
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/a1658098-cf3b-48ad-840e-250ca0805c4b"
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -860,15 +782,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 147.32 99.06 0)
+		(at 118.11 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "64aab9ee-90ea-4df1-ad82-fd739a129a11")
-		(property "Reference" "#PWR035"
-			(at 147.32 105.41 0)
+		(fields_autoplaced yes)
+		(uuid "61da4a2f-6aee-412f-9bfd-2a3b146232ef")
+		(property "Reference" "#PWR049"
+			(at 118.11 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -877,7 +800,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 147.32 102.616 0)
+			(at 118.11 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -885,7 +808,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 99.06 0)
+			(at 118.11 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -894,7 +817,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 99.06 0)
+			(at 118.11 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -903,7 +826,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 147.32 99.06 0)
+			(at 118.11 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -912,58 +835,48 @@
 			)
 		)
 		(pin "1"
-			(uuid "b39bf04a-40f0-4ddf-bbb0-d7a3cafcb87c")
+			(uuid "d4c89f7d-9627-4042-8b08-2ab4547cb1ad")
 		)
 		(instances
 			(project "PipeWatch"
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/20ecb80d-e675-4e24-a292-a05613c06f52"
-					(reference "#PWR035")
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/8d8c1d9a-b7e0-4f03-8374-91a22e1217a9"
+					(reference "#PWR050")
 					(unit 1)
 				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/393c6c8e-c038-4ae2-a3be-16706c98ea29"
-					(reference "#PWR038")
-					(unit 1)
-				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/c8abecf2-1df6-4702-8736-2aef3500b6c9"
-					(reference "#PWR044")
-					(unit 1)
-				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/eaf2427e-9e16-4ae1-8157-6e6955878b87"
-					(reference "#PWR041")
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/a1658098-cf3b-48ad-840e-250ca0805c4b"
+					(reference "#PWR049")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 142.24 97.79 270)
+		(lib_id "Device:R")
+		(at 127 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8a2a8fd4-bdda-4242-b3fa-d4ee49e2a76d")
-		(property "Reference" "C7"
-			(at 143.256 98.806 90)
+		(uuid "a630642b-fea6-4d79-b331-1533cf507532")
+		(property "Reference" "R9"
+			(at 127 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "100n"
-			(at 143.256 97.028 90)
+		(property "Value" "4k7"
+			(at 129.286 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 138.43 98.7552 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 125.222 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -972,7 +885,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 142.24 97.79 0)
+			(at 127 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -980,8 +893,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
-			(at 142.24 97.79 0)
+		(property "Description" "Resistor"
+			(at 127 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -990,43 +903,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "500c5885-0c70-43e3-91da-f2f743f22e1f")
+			(uuid "1134e621-8f7d-4bd9-a165-83bef68a8802")
 		)
 		(pin "2"
-			(uuid "b7eddb08-771b-4a0f-ac57-53c0fa3c3f87")
+			(uuid "46e8b32b-64c6-465f-8182-f2e86cd46705")
 		)
 		(instances
 			(project "PipeWatch"
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/20ecb80d-e675-4e24-a292-a05613c06f52"
-					(reference "C7")
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/8d8c1d9a-b7e0-4f03-8374-91a22e1217a9"
+					(reference "R12")
 					(unit 1)
 				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/393c6c8e-c038-4ae2-a3be-16706c98ea29"
-					(reference "C8")
-					(unit 1)
-				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/c8abecf2-1df6-4702-8736-2aef3500b6c9"
-					(reference "C10")
-					(unit 1)
-				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/eaf2427e-9e16-4ae1-8157-6e6955878b87"
-					(reference "C9")
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/a1658098-cf3b-48ad-840e-250ca0805c4b"
+					(reference "R9")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 138.43 116.84 0)
+		(lib_id "power:+3.3V")
+		(at 121.92 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "fe793e8b-b9ad-4916-9cfb-48c5705c6228")
-		(property "Reference" "#PWR034"
-			(at 138.43 123.19 0)
+		(fields_autoplaced yes)
+		(uuid "e0567900-c92f-41ce-b8ae-bc91a4c30523")
+		(property "Reference" "#PWR048"
+			(at 121.92 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1034,8 +940,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 138.43 120.904 0)
+		(property "Value" "+3.3V"
+			(at 121.92 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1043,7 +949,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 116.84 0)
+			(at 121.92 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1052,7 +958,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 116.84 0)
+			(at 121.92 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1060,8 +966,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 138.43 116.84 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 121.92 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1070,24 +976,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "91e60b3d-c36f-4be5-be24-a042d023d5f1")
+			(uuid "2c0da4ba-b166-42b7-aedf-f90de87a983a")
 		)
 		(instances
 			(project "PipeWatch"
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/20ecb80d-e675-4e24-a292-a05613c06f52"
-					(reference "#PWR034")
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/8d8c1d9a-b7e0-4f03-8374-91a22e1217a9"
+					(reference "#PWR051")
 					(unit 1)
 				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/393c6c8e-c038-4ae2-a3be-16706c98ea29"
-					(reference "#PWR037")
-					(unit 1)
-				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/c8abecf2-1df6-4702-8736-2aef3500b6c9"
-					(reference "#PWR043")
-					(unit 1)
-				)
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/eaf2427e-9e16-4ae1-8157-6e6955878b87"
-					(reference "#PWR040")
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7/a1658098-cf3b-48ad-840e-250ca0805c4b"
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)

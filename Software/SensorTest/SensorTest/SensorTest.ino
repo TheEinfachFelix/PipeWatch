@@ -80,7 +80,7 @@ void output() {
 
 void timerOutput() {
   static uint32_t previousMillis = 0;
-  const uint16_t interval = 3000;
+  const uint16_t interval = 250;
   if (millis() - previousMillis >= interval) {
     previousMillis = millis();
     output();

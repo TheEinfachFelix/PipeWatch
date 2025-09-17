@@ -168,6 +168,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -3286,7 +3393,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Input Taster#\nDaten Verbindungen\nTemperatur"
+	(text "DruckWasserstand\nLeitungs Wasserstand\nDaten Verbindungen"
 		(exclude_from_sim no)
 		(at 53.594 124.714 0)
 		(effects
@@ -5168,6 +5275,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 270.51 157.48 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2b2a9d85-977c-4ee8-8a6e-19ec8d7066d9")
+		(property "Reference" "TP1"
+			(at 275.59 156.2099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Neopixel"
+			(at 275.59 158.7499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 270.51 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 270.51 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 270.51 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a69373e8-b5c7-4a5c-82d2-f65134c9523d")
+		)
+		(instances
+			(project ""
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Felix_Connectors:490107670612")
 		(at 64.77 49.53 90)
 		(unit 1)
@@ -5596,6 +5770,138 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 163.83 26.67 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "449d3a13-a00c-4679-9be7-8743b73637bb")
+		(property "Reference" "TP2"
+			(at 164.338 25.908 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3V3"
+			(at 164.084 27.686 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
+			(at 163.83 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 163.83 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "98a63514-4d9a-4d78-a883-706885f5668b")
+		)
+		(instances
+			(project "PipeWatch"
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 163.83 21.59 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4c1b7469-c0ab-4244-b77d-3038a1b2354e")
+		(property "Reference" "#PWR052"
+			(at 160.02 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 168.91 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.83 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 163.83 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47757b95-0976-4df3-9a3f-7fd0ccebc440")
+		)
+		(instances
+			(project "PipeWatch"
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
+					(reference "#PWR052")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 71.12 58.42 0)
 		(unit 1)
@@ -5787,6 +6093,72 @@
 			(project "PipeWatch"
 				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 163.83 15.24 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5e46339d-e6ac-438e-9876-80fea76d4340")
+		(property "Reference" "#PWR054"
+			(at 170.18 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 168.91 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.83 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 163.83 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1b0d6858-30a5-490a-aff4-ff33cb2de3e7")
+		)
+		(instances
+			(project "PipeWatch"
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
+					(reference "#PWR054")
 					(unit 1)
 				)
 			)
@@ -6311,6 +6683,72 @@
 			(project "PipeWatch"
 				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 163.83 21.59 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "759bb107-cfef-4deb-81a3-5341f98a3268")
+		(property "Reference" "TP3"
+			(at 164.338 20.828 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5V"
+			(at 164.084 22.606 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
+			(at 163.83 16.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 16.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 163.83 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3031927c-64bc-4af8-ba0b-109ac02d938d")
+		)
+		(instances
+			(project "PipeWatch"
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -7217,6 +7655,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 163.83 26.67 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c4b7f1e1-bbfb-487a-bd0e-6e77db95719f")
+		(property "Reference" "#PWR053"
+			(at 160.02 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 167.64 26.6699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.83 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 163.83 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "39a88d9d-519b-41cc-8374-ea263f784b61")
+		)
+		(instances
+			(project "PipeWatch"
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
+					(reference "#PWR053")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Felix:IRM-10-5_C20618064")
 		(at 97.79 29.21 0)
 		(unit 1)
@@ -7357,6 +7862,72 @@
 			(project "PipeWatch"
 				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
 					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 163.83 15.24 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dec18178-4066-4375-9fc2-0a3f9a7ffa17")
+		(property "Reference" "TP5"
+			(at 164.338 14.478 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 164.084 16.256 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
+			(at 163.83 10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 163.83 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a20738e6-e4be-4e9d-95b7-44f2918e2f0a")
+		)
+		(instances
+			(project "PipeWatch"
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -8125,6 +8696,58 @@
 		)
 	)
 	(sheet
+		(at 90.17 163.83)
+		(size 12.7 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8d8c1d9a-b7e0-4f03-8374-91a22e1217a9")
+		(property "Sheetname" "TemperaturOutside"
+			(at 90.17 163.1184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Temperatur.kicad_sch"
+			(at 90.17 169.4946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "OUT" input
+			(at 102.87 166.37 0)
+			(uuid "3caf39c9-91c0-4075-8966-878d7b7927ee")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "PipeWatch"
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 86.36 116.84)
 		(size 12.7 15.24)
 		(exclude_from_sim no)
@@ -8222,6 +8845,58 @@
 			(project "PipeWatch"
 				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
 					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 87.63 151.13)
+		(size 12.7 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a1658098-cf3b-48ad-840e-250ca0805c4b")
+		(property "Sheetname" "TemperaturPipe"
+			(at 87.63 150.4184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Temperatur.kicad_sch"
+			(at 87.63 156.7946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "OUT" input
+			(at 100.33 153.67 0)
+			(uuid "be238dc6-157c-4ce2-82f4-1766a98360e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "PipeWatch"
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
+					(page "11")
 				)
 			)
 		)
@@ -8490,7 +9165,7 @@
 		)
 	)
 	(sheet
-		(at 86.36 135.89)
+		(at 86.36 137.16)
 		(size 12.7 5.08)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8505,8 +9180,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "d82a02c7-ee87-4bf8-a44b-b037fa66d3cb")
-		(property "Sheetname" "Taster"
-			(at 86.36 135.1784 0)
+		(property "Sheetname" "TasterCall"
+			(at 86.36 136.4484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8515,7 +9190,7 @@
 			)
 		)
 		(property "Sheetfile" "Taster.kicad_sch"
-			(at 86.36 141.5546 0)
+			(at 86.36 142.8246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8524,7 +9199,7 @@
 			)
 		)
 		(pin "OUT" input
-			(at 99.06 137.16 0)
+			(at 99.06 139.7 0)
 			(uuid "9ccb95b7-7135-4346-a10c-c13a6fdfb9b0")
 			(effects
 				(font

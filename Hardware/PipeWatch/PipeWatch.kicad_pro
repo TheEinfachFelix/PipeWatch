@@ -655,7 +655,15 @@
     ],
     [
       "d82a02c7-ee87-4bf8-a44b-b037fa66d3cb",
-      "Taster"
+      "TasterCall"
+    ],
+    [
+      "a1658098-cf3b-48ad-840e-250ca0805c4b",
+      "TemperaturPipe"
+    ],
+    [
+      "8d8c1d9a-b7e0-4f03-8374-91a22e1217a9",
+      "TemperaturOutside"
     ]
   ],
   "text_variables": {}
