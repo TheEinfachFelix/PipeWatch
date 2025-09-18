@@ -8748,6 +8748,48 @@
 		)
 	)
 	(sheet
+		(at 90.17 176.53)
+		(size 12.7 6.35)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9ff1436e-d2ee-47d4-8646-313865d477d9")
+		(property "Sheetname" "ADC"
+			(at 90.17 175.8184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADC.kicad_sch"
+			(at 90.17 183.4646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "PipeWatch"
+				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 86.36 116.84)
 		(size 12.7 15.24)
 		(exclude_from_sim no)
@@ -9033,7 +9075,7 @@
 		)
 	)
 	(sheet
-		(at 86.36 93.98)
+		(at 36.83 78.74)
 		(size 12.7 5.08)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9049,7 +9091,7 @@
 		)
 		(uuid "bb6f4f97-c94c-4fe8-b085-1c9a231ca4cf")
 		(property "Sheetname" "A02YYUW"
-			(at 86.36 93.2684 0)
+			(at 36.83 78.0284 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9058,7 +9100,7 @@
 			)
 		)
 		(property "Sheetfile" "A02YYUW.kicad_sch"
-			(at 86.36 99.6446 0)
+			(at 36.83 84.4046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9067,7 +9109,7 @@
 			)
 		)
 		(pin "RX" input
-			(at 99.06 95.25 0)
+			(at 49.53 80.01 0)
 			(uuid "f145891f-62d9-4feb-85b2-82377b38aa22")
 			(effects
 				(font
@@ -9077,7 +9119,7 @@
 			)
 		)
 		(pin "TX" input
-			(at 99.06 97.79 0)
+			(at 49.53 82.55 0)
 			(uuid "217815f9-6c21-4122-b3cc-696c3d16ef53")
 			(effects
 				(font

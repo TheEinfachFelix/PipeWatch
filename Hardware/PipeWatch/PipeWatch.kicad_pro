@@ -664,6 +664,10 @@
     [
       "8d8c1d9a-b7e0-4f03-8374-91a22e1217a9",
       "TemperaturOutside"
+    ],
+    [
+      "9ff1436e-d2ee-47d4-8646-313865d477d9",
+      "ADC"
     ]
   ],
   "text_variables": {}
