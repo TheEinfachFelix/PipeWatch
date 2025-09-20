@@ -622,7 +622,7 @@
       "Root"
     ],
     [
-      "b3262425-1936-4532-b965-b1106a940795",
+      "642a1db1-dfe4-41b4-a5ff-696653ee2e38",
       "PhotowiederstandInnen"
     ],
     [
@@ -668,6 +668,18 @@
     [
       "9ff1436e-d2ee-47d4-8646-313865d477d9",
       "ADC"
+    ],
+    [
+      "e68a0ab5-61a9-4416-97b1-0aa5370ec04d",
+      "StepUP"
+    ],
+    [
+      "389536c8-e6e2-41cc-b481-9d53d61f8962",
+      "Pressure"
+    ],
+    [
+      "8c74651b-4222-489f-b46b-87d09cc7ca53",
+      "Roter"
     ]
   ],
   "text_variables": {}

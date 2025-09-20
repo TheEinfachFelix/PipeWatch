@@ -3393,7 +3393,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "DruckWasserstand\nLeitungs Wasserstand\nDaten Verbindungen"
+	(text "Daten Verbindungen"
 		(exclude_from_sim no)
 		(at 53.594 124.714 0)
 		(effects
@@ -3472,6 +3472,16 @@
 			(type default)
 		)
 		(uuid "15d392e2-51a3-48e5-b094-6a9c8e6758fc")
+	)
+	(wire
+		(pts
+			(xy 168.91 157.48) (xy 177.8 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "229b3885-18a2-4e33-ad12-eb26ca0da507")
 	)
 	(wire
 		(pts
@@ -3735,6 +3745,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 135.89) (xy 168.91 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f164f70-1f8a-4195-b38d-2664a18399ce")
+	)
+	(wire
+		(pts
 			(xy 53.34 19.05) (xy 53.34 17.78)
 		)
 		(stroke
@@ -3962,6 +3982,16 @@
 			(type default)
 		)
 		(uuid "e08fd3dc-5825-4529-9058-b0576fcb2e10")
+	)
+	(wire
+		(pts
+			(xy 168.91 135.89) (xy 168.91 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e31d262b-c786-4169-8c71-bd162e8f3061")
 	)
 	(wire
 		(pts
@@ -8781,6 +8811,26 @@
 				(justify left top)
 			)
 		)
+		(pin "SCL" input
+			(at 102.87 177.8 0)
+			(uuid "7e24dd83-7c6e-46c4-bbbb-d60b7697c971")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SDA" input
+			(at 102.87 181.61 0)
+			(uuid "e85f0436-e4e9-45fc-9fe5-dd0ef7abc525")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "PipeWatch"
 				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
@@ -9010,66 +9060,6 @@
 			(project "PipeWatch"
 				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
 					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 86.36 105.41)
-		(size 12.7 5.08)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "b3262425-1936-4532-b965-b1106a940795")
-		(property "Sheetname" "PhotowiederstandInnen"
-			(at 86.36 104.6984 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "Photowiederstand.kicad_sch"
-			(at 86.36 111.0746 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Field2" ""
-			(at 86.36 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "OUT" input
-			(at 99.06 107.95 0)
-			(uuid "cf4e0ab1-e07b-4c40-a375-5d30cdda50fe")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "PipeWatch"
-				(path "/149975cd-655c-40c3-be76-7a7ba16694c7"
-					(page "2")
 				)
 			)
 		)
