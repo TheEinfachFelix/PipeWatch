@@ -287,32 +287,10 @@
 		(uuid "78d8dc8d-bb97-4cfd-adb9-6772c6d86088")
 	)
 	(junction
-		(at 125.73 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "847bec35-a96f-4fc4-917c-d09da5b7933e")
-	)
-	(junction
 		(at 152.4 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bc4c5874-4566-4ca3-9d7c-ec6968c2e72d")
-	)
-	(junction
-		(at 125.73 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f06646b1-9988-4e6d-ac7e-8ddb582c9b5c")
-	)
-	(wire
-		(pts
-			(xy 125.73 92.71) (xy 127 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "01de7e91-1aac-4d96-a710-3343a84eddb8")
 	)
 	(wire
 		(pts
@@ -346,7 +324,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 92.71) (xy 125.73 92.71)
+			(xy 121.92 92.71) (xy 127 92.71)
 		)
 		(stroke
 			(width 0)
@@ -373,16 +351,6 @@
 			(type default)
 		)
 		(uuid "6f6f9621-f19f-4cbf-b3a2-6cedbb18aeb1")
-	)
-	(wire
-		(pts
-			(xy 125.73 96.52) (xy 127 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9c2c828c-699f-4a3b-9ad4-fb8cc8b64108")
 	)
 	(wire
 		(pts
@@ -436,7 +404,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 96.52) (xy 125.73 96.52)
+			(xy 124.46 96.52) (xy 127 96.52)
 		)
 		(stroke
 			(width 0)
@@ -489,7 +457,7 @@
 	)
 	(symbol
 		(lib_id "Felix:VC-D-40-A")
-		(at 128.27 97.79 0)
+		(at 129.54 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -498,7 +466,7 @@
 		(fields_autoplaced yes)
 		(uuid "0e4025ec-a495-46d6-8428-0a049cfba3c3")
 		(property "Reference" "U2"
-			(at 133.462 86.36 0)
+			(at 134.732 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -506,7 +474,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 133.462 88.9 0)
+			(at 134.732 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -514,7 +482,7 @@
 			)
 		)
 		(property "Footprint" "Felix:VC-D-40-A"
-			(at 128.27 97.79 0)
+			(at 129.54 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -523,7 +491,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 97.79 0)
+			(at 129.54 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -532,7 +500,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 128.27 97.79 0)
+			(at 129.54 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -642,7 +610,7 @@
 		(fields_autoplaced yes)
 		(uuid "ead66183-507d-4d4d-b2d8-ff3deea61e51")
 		(property "Reference" "R18"
-			(at 154.94 105.4099 0)
+			(at 154.94 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -650,8 +618,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
-			(at 154.94 107.9499 0)
+		(property "Value" "680R"
+			(at 154.94 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
