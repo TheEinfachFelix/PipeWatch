@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "149975cd-655c-40c3-be76-7a7ba16694c7")
 	(paper "A4")
+	(title_block
+		(title "Pipe Watch")
+		(date "2025-09-24")
+		(company "Felix Pelster")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x02_Pin"
 			(pin_names

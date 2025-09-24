@@ -4,6 +4,10 @@
 	(generator_version "9.0")
 	(uuid "ca075809-795e-4ef5-afd7-96c3a51707e3")
 	(paper "A4")
+	(title_block
+		(date "2025-09-24")
+		(company "Felix Pelster")
+	)
 	(lib_symbols
 		(symbol "Device:C"
 			(pin_numbers

@@ -4,6 +4,10 @@
 	(generator_version "9.0")
 	(uuid "7e371a9c-8a1b-4e6e-bff3-2855bc257b5d")
 	(paper "A4")
+	(title_block
+		(date "2025-09-24")
+		(company "Felix Pelster")
+	)
 	(lib_symbols
 		(symbol "Analog_ADC:ADS1115IDGS"
 			(exclude_from_sim no)

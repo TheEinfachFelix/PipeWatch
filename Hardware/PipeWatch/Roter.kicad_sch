@@ -4,6 +4,10 @@
 	(generator_version "9.0")
 	(uuid "6ff0cca5-5a51-4926-9d22-bb95b0aa2367")
 	(paper "A4")
+	(title_block
+		(date "2025-09-24")
+		(company "Felix Pelster")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x03_Socket"
 			(pin_names
