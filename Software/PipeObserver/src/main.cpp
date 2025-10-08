@@ -12,6 +12,7 @@ void setup() {
   innerSensor.begin();
   outerSensor.begin();
   setupADC(ADC_SDA_PIN, ADC_SCL_PIN);
+  pinMode(BUTTON_PIN, INPUT);
 }
 
 void loop() {
@@ -30,6 +31,10 @@ void loop() {
     Serial.print(voltage);
     Serial.println(" V");
   }
+  Serial.print("Button State: ");
+  Serial.println(digitalRead(BUTTON_PIN) == HIGH ? "Pressed" : "Released");
+  Serial.println("-----");
+
 
   delay(2000);
 }

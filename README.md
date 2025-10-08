@@ -2,8 +2,8 @@
 
 ## Sensors
 
-- MSU: LIS3DHTR
+- MSU: LIS3DHTR 
 - WS2812B
-- Taster
-- Temp: 2x DS18B20(UMW)
-- ADC: ADS1115IDGSR
+- Taster (Implementiert)
+- Temp: 2x DS18B20(UMW) (Implementiert)
+- ADC: ADS1115IDGSR (Implementiert)
