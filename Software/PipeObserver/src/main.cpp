@@ -1,61 +1,33 @@
 #include <Arduino.h>
+#include "temp.hpp"
 
-// put function declarations here:
-int myFunction(int, int);
+#define ADC_SDA_PIN 14
+#define ADC_SCL_PIN 21
+
+TemperatureSensor innerSensor(2, 10); // GPIO 2, 10-bit resolution
+TemperatureSensor outerSensor(38, 10); // GPIO 38, 10-bit resolution
 
 void setup() {
   // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  Serial.begin(115200);
+  innerSensor.begin();
+  outerSensor.begin();
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  float innerTemp = innerSensor.readTemperature();
+  float outerTemp = outerSensor.readTemperature();
+  Serial.print("Inner Temperature: ");
+  Serial.print(innerTemp);
+  Serial.print(" °C, Outer Temperature: ");
+  Serial.print(outerTemp);
+  Serial.println(" °C");
+  delay(2000);
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
 
 /*
-#include "DS18B20.h"
-
-
-#define ONE_WIRE_BUS              2
-
-OneWire oneWire(ONE_WIRE_BUS);
-DS18B20 sensor(&oneWire);
-
-
-void setup(void)
-{
-  Serial.begin(115200);
-  Serial.println(__FILE__);
-  Serial.print("DS18B20_LIB_VERSION: ");
-  Serial.println(DS18B20_LIB_VERSION);
-  Serial.println();
-
-  sensor.begin();
-  sensor.setResolution(10);
-}
-
-
-void loop(void)
-{
-  sensor.requestTemperatures();
-
-  //  wait until sensor is ready
-  while (!sensor.isConversionComplete())
-  {
-    delay(1);
-  }
-
-  Serial.print("Temp: ");
-  Serial.println(sensor.getTempC());
-}
-
-
-//  -- END OF FILE --
 
 
 #include <Arduino.h>
