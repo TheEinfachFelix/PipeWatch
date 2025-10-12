@@ -1,5 +1,7 @@
 #include "adc.hpp"
 
+ADS1115<TwoWire> ads(Wire);
+
 void setupADC(int SDA_PIN, int SCL_PIN) {
     // The ADC input range (or gain) can be changed via the following
   // functions, but be careful never to exceed VDD +0.3V max, or to
