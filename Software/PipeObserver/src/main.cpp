@@ -2,9 +2,10 @@
 #include "temp.hpp"
 #include "conf.hpp"
 #include "adc.hpp"
+#include "led.hpp"
 
 //TemperatureSensor innerSensor(INNER_TEMP_PIN, TEMP_RESOLUTION);
-TemperatureSensor outerSensor(OUTER_TEMP_PIN, TEMP_RESOLUTION);
+TemperatureSensor outerSensor(15, TEMP_RESOLUTION);//15
 
 void setup() {
   // put your setup code here, to run once:
@@ -13,9 +14,15 @@ void setup() {
   outerSensor.begin();
   setupADC(ADC_SDA_PIN, ADC_SCL_PIN);
   pinMode(BUTTON_PIN, INPUT);
+  SetupLED();
 }
 
 void loop() {
+  setColor(0, 0, 255); // Blue
+
+  delay(5000);
+
+  setColor(0, 255, 0); // Green
   //float innerTemp = innerSensor.readTemperature();
   float outerTemp = outerSensor.readTemperature();
   //Serial.print("Inner Temperature: ");

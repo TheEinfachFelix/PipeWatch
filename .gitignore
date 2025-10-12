@@ -1,1 +1,4 @@
+*.lck
 .lck
+Hardware/PipeWatch/~PipeWatch.kicad_pcb.lck
+Hardware/PipeWatch/~PipeWatch.kicad_sch.lck
