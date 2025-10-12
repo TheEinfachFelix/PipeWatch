@@ -4,3 +4,5 @@ Aktuell muss der Außen temperatursensor auf pin 15 gelegt werden und die Neopix
 ADC OK
 MSU OK
 Taster OK
+Neopixel Error Unbekannt
+temperatursensor Falscher Pin
