@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "PipeObserver",
+			"path": "Software/PipeObserver"
+		}
+	],
+	"settings": {}
+}
