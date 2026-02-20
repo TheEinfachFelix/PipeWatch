@@ -10,7 +10,9 @@ services:
     build: ./NodeRed/
     environment:
       - TZ=Europe/Amsterdam
-      - FLOWS=my_flows.json
+      - FLOWS=flows.json
+    #  - NODE_OPTIONS=""
+      - NODE_RED_CREDENTIAL_SECRET=your_secret_goes_here
     ports:
       - "1880:1880"
     networks:

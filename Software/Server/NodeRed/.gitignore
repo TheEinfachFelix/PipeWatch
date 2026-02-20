@@ -1,1 +1,3 @@
 data/*
+!data/settings.js
+!data/flows*
