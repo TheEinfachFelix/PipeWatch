@@ -3,6 +3,7 @@
 #include "conf.hpp"
 #include "adc.hpp"
 #include "led.hpp"
+#include "msu.hpp"
 #include <ArduinoJson.h>
 
 void SendSensorData();
@@ -28,6 +29,7 @@ void setup() {
   //SetupLED();
 
   // MSU
+  MSUsetup();
 
   // Temp
   //innerSensor.begin();
@@ -40,6 +42,8 @@ void setup() {
   // ADC
 
   // MSU
+  if (!MSUready())
+    sendError("MSU not ready");
   
   // Temp
   if (!outerSensor.isConnected())
@@ -67,10 +71,16 @@ String getSensorData()
 {
   StaticJsonDocument<256> doc;
 
+  // ADC
   doc["WaterPresure"] = readADC(ADC_CH_Pressure);
   doc["WaterLevel"] = readADC(ADC_CH_WaterLvl);
   doc["Lightlevel"] = readADC(ADC_CH_Photores);
+
   // MSU
+  Acceleration MSUdata = MSUread();
+  doc["AccelerationX"] = MSUdata.x;
+  doc["AccelerationY"] = MSUdata.y;
+  doc["AccelerationZ"] = MSUdata.z;
 
   // Temp
   if(outerSensor.isConnected())

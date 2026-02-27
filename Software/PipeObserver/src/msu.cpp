@@ -1,19 +1,8 @@
 #include "msu.hpp"
 
-
-/*
-#include <Arduino.h>
-#include "LIS3DHTR.h"
-#include "SPI.h"
-#include "conf.hpp"  // <-- config einbinden
-
-// LIS über SPI
 LIS3DHTR<SPIClass> LIS;
 
-void setup() {
-  Serial.begin(115200);
-  while (!Serial);
-
+void MSUsetup() {
   // SPI starten mit MSU Pins aus config.hpp
   SPI.begin(MSU_SPC_PIN, MSU_SAO_PIN, MSU_SDI_PIN); // CLK, MISO, MOSI
   LIS.begin(SPI, MSU_CS_PIN);                        // CS Pin aus config.hpp
@@ -24,17 +13,29 @@ void setup() {
   LIS.setOutputDataRate(LIS3DHTR_DATARATE_50HZ);
 }
 
-void loop() {
-    if (!LIS) {
-        Serial.println("LIS3DHTR didn't connect.");
-        while (1);
-        return;
-    }
+bool MSUready()
+{
+    if (!LIS)
+        return false;
+    if (!LIS.available())
+        return false;
+    if (!LIS.isConnection())
+        return false;
 
-    // Temperatur auslesen
-    Serial.print("temp:"); 
-    Serial.println(LIS.getTemperature());
-    delay(500);
+    return true;
 }
 
-*/
+
+int16_t MSUtemp()
+{
+    return LIS.getTemperature();
+}
+
+
+
+Acceleration MSUread() {
+    Acceleration acc;
+    LIS.getAcceleration(&acc.x, &acc.y, &acc.z);
+    return acc;
+}
+
