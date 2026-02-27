@@ -3,6 +3,10 @@
 // ADC
 #define ADC_SDA_PIN 14
 #define ADC_SCL_PIN 21
+#define ADC_CH_Pressure 0
+#define ADC_CH_WaterLvl 1
+#define ADC_CH_Photores 2
+#define ADC_CH_NC 3
 
 // Temperature Sensors
 #define INNER_TEMP_PIN 2   // GPIO pin for inner temperature sensor
@@ -23,3 +27,14 @@
 #define MSU_SAO_PIN 11 // GPIO pin for MSU SAO
 #define MSU_SDI_PIN 12 // GPIO pin for MSU SDI
 #define MSU_SPC_PIN 13 // GPIO pin for MSU SPC
+
+// Json
+#define JSON_DEVICE_NAME "ESP32-S3-01"
+#define JSON_MSG_TYPE_ERROR "ERROR"
+#define JSON_MSG_TYPE_DATA "DATA"
+#define JSON_VERSION 1
+
+// Status
+#define STATUS_RUN "Running"
+#define STATUS_ERROR "Error"
+#define STATUS_START "Startup"
