@@ -5,7 +5,6 @@
 
 using namespace ADS1X15;
 
-
-
 void setupADC(int SDA_PIN, int SCL_PIN);
 float readADC(int channel);
+bool ADCready();

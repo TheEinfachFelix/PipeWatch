@@ -11,7 +11,7 @@ String getSensorData();
 void sendError(String ErrorMsg);
 void sendMsg(String type, String data);
 
-//TemperatureSensor innerSensor(INNER_TEMP_PIN, TEMP_RESOLUTION);
+TemperatureSensor innerSensor(INNER_TEMP_PIN, TEMP_RESOLUTION);
 TemperatureSensor outerSensor(15, TEMP_RESOLUTION);//15
 
 String status = STATUS_START;
@@ -19,6 +19,7 @@ String status = STATUS_START;
 void setup() {
 
   /////////////////////// Setup ///////////////////////
+  // Serial
   Serial.begin(115200);
   Serial1.begin(115200);
 
@@ -32,14 +33,15 @@ void setup() {
   MSUsetup();
 
   // Temp
-  //innerSensor.begin();
+  innerSensor.begin();
   outerSensor.begin();
 
   delay(5000);
 
   /////////////////////// check running ///////////////////////
-
   // ADC
+  if (!ADCready())
+    sendError("ADC not ready");
 
   // MSU
   if (!MSUready())
@@ -47,9 +49,9 @@ void setup() {
   
   // Temp
   if (!outerSensor.isConnected())
-    sendError("OuterSensor not Connected");
-  //if (!innerSensor.isConnected())
-  //  sendError("InnerSensor not Connected");
+    sendError("OuterSensor not ready");
+  if (!innerSensor.isConnected())
+    sendError("InnerSensor not ready");
 
   // Button
   pinMode(BUTTON_PIN, INPUT); //TODO: wo für nutze ich den?
@@ -92,8 +94,6 @@ String getSensorData()
   serializeJson(doc, jsonString);
   return jsonString;
 }
-
-
 
 void sendError(String ErrorMsg)
 {

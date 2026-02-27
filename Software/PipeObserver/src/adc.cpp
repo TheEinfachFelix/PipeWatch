@@ -19,6 +19,21 @@ void setupADC(int SDA_PIN, int SCL_PIN) {
   ads.begin();
   ads.setGain(Gain::TWOTHIRDS_6144MV);
   ads.setDataRate(Rate::ADS1115_250SPS);
+
+}
+
+bool ADCready()
+{
+  try
+  {
+    int16_t data = ads.getLastConversionResults();
+    return true;
+  }
+  catch(const std::exception& e)
+  {
+    return false;
+  }
+  
 }
 
 float readADC(int channel) {
