@@ -1,0 +1,16 @@
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB3
+    type: influxdb
+    access: proxy
+    url: http://influxdb3-core:8181
+    jsonData:
+      version: InfluxQL
+      httpMode: GET
+    secureJsonData:
+      # Bei InfluxDB 3 Core wird das Token im Header "Authorization" erwartet
+      # Grafana regelt das bei InfluxQL über das Passwort-Feld
+      password: "apiv3_hbstUkjmzRIuIoGK0xQZzKDcIfo-MxsEVE2OK8ZACkg3XEowK47JbYPllsjT1GUKw4TL9Qx1rcigMujYrxLRlg"
+    database: "PipeDB"
+    user: "admin" # Kann beliebig sein, InfluxDB 3 achtet primär auf das Token
