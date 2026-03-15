@@ -35,6 +35,6 @@
 #define JSON_VERSION 1
 
 // Status
-#define STATUS_RUN "Running"
+#define STATUS_RUN "RUN"
 #define STATUS_ERROR "Error"
 #define STATUS_START "Startup"

@@ -1,0 +1,7 @@
+
+New token created successfully!
+
+Token: apiv3_hbstUkjmzRIuIoGK0xQZzKDcIfo-MxsEVE2OK8ZACkg3XEowK47JbYPllsjT1GUKw4TL9Qx1rcigMujYrxLRlg
+HTTP Requests Header: Authorization: Bearer apiv3_hbstUkjmzRIuIoGK0xQZzKDcIfo-MxsEVE2OK8ZACkg3XEowK47JbYPllsjT1GUKw4TL9Qx1rcigMujYrxLRlg       
+
+IMPORTANT: Store this token securely, as it will not be shown again.

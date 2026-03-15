@@ -5,6 +5,7 @@
 #include "led.hpp"
 #include "msu.hpp"
 #include <ArduinoJson.h>
+#include <cmath>
 
 void SendSensorData();
 String getSensorData();
@@ -21,7 +22,7 @@ void setup() {
   /////////////////////// Setup ///////////////////////
   // Serial
   Serial.begin(115200);
-  Serial1.begin(115200);
+  Serial1.begin(38400, 134217756U,47,48);
 
   // ADC
   setupADC(ADC_SDA_PIN, ADC_SCL_PIN);
@@ -36,7 +37,8 @@ void setup() {
   innerSensor.begin();
   outerSensor.begin();
 
-  delay(5000);
+  Serial.println("Waiting");
+  delay(25000);
 
   /////////////////////// check running ///////////////////////
   // ADC
@@ -46,7 +48,7 @@ void setup() {
   // MSU
   if (!MSUready())
     sendError("MSU not ready");
-  
+
   // Temp
   if (!outerSensor.isConnected())
     sendError("OuterSensor not ready");
@@ -61,7 +63,7 @@ void setup() {
 
 void loop() {
   SendSensorData();
-  delay(2000);
+  delay(30000);
 }
 
 void SendSensorData()
@@ -73,22 +75,22 @@ String getSensorData()
 {
   StaticJsonDocument<256> doc;
 
-  // ADC
-  doc["WaterPresure"] = readADC(ADC_CH_Pressure);
-  doc["WaterLevel"] = readADC(ADC_CH_WaterLvl);
-  doc["Lightlevel"] = readADC(ADC_CH_Photores);
+  // ADC - Rundung auf 3 Stellen und Fixierung als Zahl
+  doc["WaterPresure"] = serialized(String(readADC(ADC_CH_Pressure), 3));
+  doc["WaterLvl"]     = serialized(String(readADC(ADC_CH_WaterLvl), 3));
+  doc["Lightlvl"]     = serialized(String(readADC(ADC_CH_Photores), 3));
 
   // MSU
   Acceleration MSUdata = MSUread();
-  doc["AccelerationX"] = MSUdata.x;
-  doc["AccelerationY"] = MSUdata.y;
-  doc["AccelerationZ"] = MSUdata.z;
+  doc["AccX"] = serialized(String(MSUdata.x, 3));
+  doc["AccY"] = serialized(String(MSUdata.y, 3));
+  doc["AccZ"] = serialized(String(MSUdata.z, 3));
 
   // Temp
   if(outerSensor.isConnected())
-    doc["Temp_Out"] = outerSensor.readTemperature();
-  //if(innerSensor.isConnected())
-  //  doc["Temp_Inside"] = innerSensor.readTemperature();
+    doc["Temp_Out"] = serialized(String(outerSensor.readTemperature(), 3));
+  if(innerSensor.isConnected())
+    doc["Temp_Inside"] = serialized(String(innerSensor.readTemperature(), 3));
 
   String jsonString;
   serializeJson(doc, jsonString);
@@ -98,9 +100,13 @@ String getSensorData()
 void sendError(String ErrorMsg)
 {
   sendMsg(JSON_MSG_TYPE_ERROR, ErrorMsg);
+  delay(5000);
 }
 
 void sendMsg(String type, String data)
 {
-  Serial1.println("{\"version\":"+(String)JSON_VERSION+",\"device\":\""+JSON_DEVICE_NAME+"\", \"uptime\":"+millis()+", \"state\":\""+status+"\", \"data\":\""+data+"\"}");
+  data.replace("\"","\\\"");
+  String OutStr = "{\"v\":"+(String)JSON_VERSION+",\"d\":\""+JSON_DEVICE_NAME+"\", \"uT\":"+millis()+", \"state\":\""+status+"\", \"data\":\""+data+"\"}";
+  Serial.println(OutStr);
+  Serial1.println(OutStr);
 }

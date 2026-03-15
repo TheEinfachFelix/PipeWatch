@@ -11,11 +11,11 @@ MQTT_TOPIC = "mesh/dach/i"
 def generate_sensor_data():
     return {
         "WaterPresure": 1.75 + random.uniform(-0.05, 0.05),
-        "WaterLevel": 26.3 + random.uniform(-0.5, 0.5),
-        "Lightlevel": 260 + random.uniform(-40, 40),
-        "AccelerationX": random.uniform(-0.1, 0.1),
-        "AccelerationY": random.uniform(-0.1, 0.1),
-        "AccelerationZ": 0.6 + random.uniform(-0.05, 0.05),
+        "WaterLvl": 26.3 + random.uniform(-0.5, 0.5),
+        "Lightlvl": 260 + random.uniform(-40, 40),
+        "AccX": random.uniform(-0.1, 0.1),
+        "AccY": random.uniform(-0.1, 0.1),
+        "AccZ": 0.6 + random.uniform(-0.05, 0.05),
         "Temp_Out": 19 + random.uniform(-0.8, 0.8),
     }
 
@@ -27,9 +27,9 @@ client.connect(MQTT_BROKER, 1883, 60)
 
 def build_packet():
     payload_data = {
-        "version": 1,
-        "device": "TestNode",
-        "uptime": int(time.time()),
+        "v": 1,
+        "d": "TestNode",
+        "uT": int(time.time()),
         "state": "RUN",
         "data": json.dumps(generate_sensor_data())
     }
@@ -68,7 +68,7 @@ while True:
     packet = build_packet()
 
     client.publish(MQTT_TOPIC, packet)
-
+    print(packet)
     print("Packet sent")
 
     time.sleep(5)
