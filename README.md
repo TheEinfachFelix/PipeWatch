@@ -7,3 +7,9 @@
 - Taster (Implementiert)
 - Temp: 2x DS18B20(UMW) (Implementiert)
 - ADC: ADS1115IDGSR (Implementiert)
+
+## Todos
+
+- Umrechnung der Werte in echte einheiten
+- Dashboard für mehrere Geräte
+- Alerting
