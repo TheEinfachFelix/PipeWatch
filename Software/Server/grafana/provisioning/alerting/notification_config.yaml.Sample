@@ -1,0 +1,25 @@
+apiVersion: 1
+
+contactPoints:
+  - orgId: 1
+    name: TelegramCampMessengerGroup
+    receivers:
+      - uid: telegram_pipe_001
+        type: telegram
+        settings:
+          # Dein Bot Token vom @BotFather
+          bottoken: "123456789:ABCdefGHIjklMNOpqrSTUvwxYZ"
+          # Die Chat ID der Gruppe (muss mit -100 beginnen bei Gruppen)
+          chatid: "-100123456789"
+          # Optional: Nachrichtentyp (HTML oder Markdown)
+          parse_mode: "HTML"
+
+policies:
+  - orgId: 1
+    receiver: TelegramCampMessengerGroup
+    group_by: ['alertname', 'grafana_folder']
+    group_wait: 30s
+    group_interval: 5m
+    repeat_interval: 4h
+    # Wenn dieser Alert der einzige ist, kannst du ihn als Default setzen:
+    # default: true

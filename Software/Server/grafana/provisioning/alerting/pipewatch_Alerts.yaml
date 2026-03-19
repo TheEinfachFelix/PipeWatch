@@ -1,0 +1,95 @@
+apiVersion: 1
+groups:
+    - orgId: 1
+      name: 1m
+      folder: Pipewatch
+      interval: 1m
+      rules:
+        - uid: ffgivl5t7iwhse
+          title: WaterPressure
+          condition: C
+          data:
+            - refId: A
+              relativeTimeRange:
+                from: 600
+                to: 0
+              datasourceUid: P2A13252C41BAC6F2
+              model:
+                groupBy:
+                    - params:
+                        - $__interval
+                      type: time
+                    - params:
+                        - "null"
+                      type: fill
+                intervalMs: 1000
+                maxDataPoints: 43200
+                measurement: PipeWatch
+                orderByTime: ASC
+                policy: default
+                refId: A
+                resultFormat: time_series
+                select:
+                    - - params:
+                            - WaterPresure
+                        type: field
+                      - params: []
+                        type: mean
+                tags: []
+            - refId: B
+              datasourceUid: __expr__
+              model:
+                conditions:
+                    - evaluator:
+                        params: []
+                        type: gt
+                      operator:
+                        type: and
+                      query:
+                        params: []
+                      reducer:
+                        params: []
+                        type: last
+                      type: query
+                datasource:
+                    type: __expr__
+                    uid: __expr__
+                expression: A
+                intervalMs: 1000
+                maxDataPoints: 43200
+                reducer: last
+                refId: B
+                type: reduce
+            - refId: C
+              datasourceUid: __expr__
+              model:
+                conditions:
+                    - evaluator:
+                        params:
+                            - 3
+                        type: gt
+                      operator:
+                        type: and
+                      query:
+                        params: []
+                      reducer:
+                        params: []
+                        type: last
+                      type: query
+                datasource:
+                    type: __expr__
+                    uid: __expr__
+                expression: B
+                intervalMs: 1000
+                maxDataPoints: 43200
+                refId: C
+                type: threshold
+          noDataState: NoData
+          execErrState: Error
+          for: 1m
+          annotations:
+            summary: Pipe Pressure is to high
+          labels: {}
+          isPaused: false
+          notification_settings:
+            receiver: TelegramCampMessangerGroup
