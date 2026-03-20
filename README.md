@@ -12,4 +12,3 @@
 
 - Umrechnung der Werte in echte einheiten
 - Dashboard für mehrere Geräte
-- Alerting
